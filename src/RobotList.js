@@ -49,26 +49,37 @@ const RobotList = () => {
 
   return (
     <Container style={{ textAlign: "center", marginTop: "20px" }}>
-      {/* Título */}
-      <h1 style={{ fontSize: "28px", fontWeight: "bold", marginBottom: "20px" }}>
-        Adopta un Robot con Robot Lovers!
-      </h1>
-      <hr></hr>
+            <h1  
+                style={{  
+                    textAlign: "center",  
+                    fontFamily: "'Roboto', sans-serif",  
+                    fontWeight: 900,  
+                    fontSize: "35px",  
+                    textShadow: "0px 2px 2px rgba(0, 0, 0, 0.4)",  
+                    marginBottom: "1px"  
+                }}  
+            >  
+                Adopta un Robot con Robot Lovers!  
+            </h1>  
 
-        {/* Imagen del banner */}
-        <div style={{ display: "flex", justifyContent: "center" }}>
-        <img
-            src="/robot-banner.png"
-            alt="Robots"
-            style={{
-            width: "100%",
-            maxWidth: "1200px",
-            borderRadius: "0px"
-            }}
-        />
-        </div>
+            {/* Imagen de robots */}
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <hr style={{ width: "104%", marginLeft: "-2%", marginRight: "-2%", height: "1px", backgroundColor: "rgb(0, 0, 0.4)", border: "none", boxShadow: "0px 4px 4px rgba(0, 0, 0, 1)", marginBottom: "9px" }} />
+                
+                <img 
+                    src="/robot-banner.png" 
+                    alt="Banner de Robots" 
+                    style={{
+                        width: "960px",
+                        height: "261px",
+                        display: "block",
+                        margin: "0 auto"
+                    }} 
+                />
 
-        <hr></hr>
+                <hr style={{ width: "104%", marginLeft: "-2%", marginRight: "-2%", height: "1px", backgroundColor: "rgb(0, 0, 0.4)", border: "none", boxShadow: "0px 4px 4px rgba(0, 0, 0, 1)", marginTop: "11px" }} />
+            </div>
+
       {/* Manejo de carga y errores */}
       {loading ? (
         <div style={{ textAlign: "center", marginTop: "30px" }}>

@@ -7,8 +7,6 @@ function App() {
     const [auth, setAuth] = useState(false);
 
     return (
-
-      
         <BrowserRouter>
             <Routes>
                 {!auth ? (
