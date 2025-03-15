@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table, Container, Spinner, Alert, Card } from "react-bootstrap";
+import "./RobotList.css";
 
 const RobotList = () => {
   const [robots, setRobots] = useState([]);
@@ -56,7 +57,8 @@ const RobotList = () => {
                     fontWeight: 900,  
                     fontSize: "35px",  
                     textShadow: "0px 2px 2px rgba(0, 0, 0, 0.4)",  
-                    marginBottom: "1px"  
+                    marginBottom: "1px",  
+                    marginTop: "15px"
                 }}  
             >  
                 Adopta un Robot con Robot Lovers!  
@@ -95,16 +97,8 @@ const RobotList = () => {
         <div style={{ display: "flex", alignItems: "flex-start", width: "100%", gap: "20px" }}>
   {/* Tabla de robots */}
   <div style={{ flex: "1", minWidth: "60%" }}> 
-    <Table
-      hover
-      responsive
-      style={{
-        width: "100%",
-        borderCollapse: "collapse",
-        cursor: "pointer",
-      }}
-    >
-      <thead style={{ backgroundColor: "#333A40", color: "white" }}>
+  <table class="StandardTable">
+    <thead>
         <tr>
           <th style={{ padding: "12px", textAlign: "center", fontWeight: "bold" }}>ID</th>
           <th style={{ padding: "12px", textAlign: "left", fontWeight: "bold" }}>Nombre</th>
@@ -122,7 +116,7 @@ const RobotList = () => {
           </tr>
         ))}
       </tbody>
-    </Table>
+      </table>
   </div>
 
   {/* Sección de detalles del robot :D*/}

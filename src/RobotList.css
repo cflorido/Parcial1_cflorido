@@ -1,0 +1,14 @@
+.StandardTable thead th {
+    background: #333a40;
+    color: rgb(255, 255, 255); 
+}
+.StandardTable tbody tr {
+    border-bottom: 1px solid #ddd; 
+}
+
+
+
+.StandardTable th, .StandardTable td {
+    padding: 12px; 
+    min-width: 150px; 
+}
