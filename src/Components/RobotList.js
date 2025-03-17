@@ -1,9 +1,8 @@
-// src/components/RobotList.js
+
 import React, { useEffect, useState } from "react";
 import { Container, Spinner, Alert } from "react-bootstrap";
 import RobotTable from "./RobotTable";
 import RobotDetails from "./RobotDetails";
-import Footer from "./Footer";
 import "./RobotList.css";
 
 const RobotList = () => {
@@ -46,7 +45,7 @@ const RobotList = () => {
     };
 
     return (
-        <Container style={{ textAlign: "center", marginTop: "20px", marginLeft: "30px"}}>
+        <Container style={{ textAlign: "center", marginTop: "20px", marginLeft: "35px"}}>
             {loading ? (
                 <Spinner animation="border" role="status">
                     <span className="visually-hidden">Cargando...</span>
@@ -59,23 +58,26 @@ const RobotList = () => {
                         display: "flex", 
                         alignItems: "flex-start", 
                         gap: "20px", 
-                        justifyContent: "center" // Centra los elementos si hay espacio
+                        justifyContent: "center", 
+                        
                     }}
                 >
-                    {/* Contenedor de la tabla con ancho fijo */}
+                  
                     <div style={{ flex: "1 1 60%", minWidth: "600px" }}>
                         <RobotTable robots={robots} fetchRobotDetails={fetchRobotDetails} />
                     </div>
     
-                    {/* Contenedor de los detalles con un ancho específico */}
+                   
                     {selectedRobot && (
-                        <div style={{ flex: "1 1 30%", minWidth: "250px", marginRight: "50px" }}>
+                        <div style={{ flex: "1 1 30%", minWidth: "250px", marginRight: "55px" }}>
                             <RobotDetails selectedRobot={selectedRobot} getRawImageUrl={getRawImageUrl} />
                         </div>
                     )}
                 </div>
             )}
-            <Footer />
+                        <footer className="loginn-footer">
+                Contact us: +57 3102105253 - info@robot-lovers.com - @robot-lovers
+            </footer>
         </Container>
     );
     

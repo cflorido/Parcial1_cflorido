@@ -12,14 +12,14 @@ body, .card-text, .login-title {
     font-family: 'Inter', sans-serif;
 }
 .cancel-button {
-    border: 0px solid #e75d5d !important; /* Cambia el borde a rojo */
+    border: 0px solid #e75d5d !important; 
     outline: none !important;
     box-shadow: none !important;
 }
 
 .cancel-button:focus,
 .cancel-button:active {
-    border: 0px solid #e75d5d !important; /* Mantiene el borde rojo al hacer clic */
+    border: 0px solid #e75d5d !important; 
     outline: none !important;
     box-shadow: none !important;
 }
@@ -86,8 +86,8 @@ body, .card-text, .login-title {
 }
 
 .error-message {
-    text-align: left; /* Alinea el texto a la izquierda */
+    text-align: left; 
 }
 input[type="password"] {
-    -webkit-text-security: disc; /* Cambia los puntos por asteriscos */
+    -webkit-text-security: disc; 
 }

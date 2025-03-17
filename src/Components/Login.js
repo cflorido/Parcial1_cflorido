@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
+import { FormattedMessage } from "react-intl";  
 import "./Login.css"; 
 
 function Login({ setAuth }) {
@@ -29,11 +30,15 @@ function Login({ setAuth }) {
 
     return (
         <Container className="login-container" style={{ maxWidth: "1020px" }}>
-            <h3 className="login-subtitle" style={{ marginTop: "0px", fontWeight: "650" }}>Inicio de sesión</h3>
+            <h3 className="login-subtitle" style={{ marginTop: "0px", fontWeight: "650" }}>
+                <FormattedMessage id="loginTitle" defaultMessage="Login" />
+            </h3>
 
             <Form onSubmit={handleSubmit} className="login-form">
                 <Form.Group controlId="formUsername">
-                    <Form.Label style={{ marginTop: "6px", fontWeight: "650" }}>Nombre de usuario</Form.Label>
+                    <Form.Label style={{ marginTop: "6px", fontWeight: "650" }}>
+                        <FormattedMessage id="usernameLabel" defaultMessage="Username" />
+                    </Form.Label>
                     <Form.Control
                         type="text"
                         value={login}
@@ -44,7 +49,9 @@ function Login({ setAuth }) {
                 </Form.Group>
 
                 <Form.Group controlId="formPassword">
-                    <Form.Label style={{ marginTop: "6px", fontWeight: "650" }}>Contraseña</Form.Label>
+                    <Form.Label style={{ marginTop: "6px", fontWeight: "650" }}>
+                        <FormattedMessage id="passwordLabel" defaultMessage="Password" />
+                    </Form.Label>
                     <Form.Control
                         type="text" 
                         value={"*".repeat(password.length)} 
@@ -64,26 +71,26 @@ function Login({ setAuth }) {
                 <Row>
                     <Col>
                         <Button type="submit" className="login-button" style={{ borderRadius: "0px", backgroundColor: "#003B93", fontWeight: "645", color: "white" }}>
-                            Ingresar
+                            <FormattedMessage id="loginButton" defaultMessage="Log In" />
                         </Button>
                     </Col>
                     <Col>
                         <Button className="cancel-button" style={{ borderRadius: "0px", backgroundColor: "#E75D5D", color: "black", fontWeight: "645" }}>
-                            Cancelar
+                            <FormattedMessage id="cancelButton" defaultMessage="Cancel" />
                         </Button>
                     </Col>
                 </Row>
             </Form>
 
-            {/* Mensaje de error en azul */}
+         
             {error && (
                 <div style={{ width: "90%", textAlign: "left", paddingLeft: "225px" }}>
-                <p style={{ color: "#CD3232", fontWeight: "bold", marginTop: "10px" }}>
-                    {error}
-                </p>
-            </div>
+                    <p style={{ color: "#CD3232", fontWeight: "bold", marginTop: "10px" }}>
+                        <FormattedMessage id="errorMessage" defaultMessage="Authentication error. Please check your credentials" />
+                    </p>
+                </div>
+            )}
 
-        )}
             <footer className="login-footer">
                 Contact us: +57 3102105253 - info@robot-lovers.com - @robot-lovers
             </footer>

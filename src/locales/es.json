@@ -1,0 +1,16 @@
+{
+    "usernameLabel": "Nombre de usuario",
+    "passwordLabel": "Contraseña",
+    "loginButton": "Ingresar",
+    "cancelButton": "Cancelar",
+    "errorMessage": "Error de autenticación. Revise sus credenciales",
+     "bannerTitle": "¡Adopta un Robot con Robot Lovers!",
+     "idColumn": "ID",
+     "nameColumn": "Nombre",
+     "modelColumn": "Modelo",
+     "manufacturerColumn": "Empresa Fabricante",
+     "manufactureYear": "Año de Fabricación",
+     "processingPower": "Capacidad de Procesamiento",
+     "humor": "Humor"
+  }
+  

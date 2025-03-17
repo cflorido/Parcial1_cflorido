@@ -1,0 +1,16 @@
+{
+    "usernameLabel": "Username",
+    "passwordLabel": "Password",
+    "loginButton": "Log In",
+    "cancelButton": "Cancel",
+    "errorMessage": "Authentication error. Please check your credentials",
+    "bannerTitle": "Adopt a Robot with Robot Lovers!",
+    "idColumn": "ID",
+    "nameColumn": "Name",
+    "modelColumn": "Model",
+    "manufacturerColumn": "Manufacturer Company",
+    "manufactureYear": "Manufacture Year",
+    "processingPower": "Processing Power",
+    "humor": "Humor"
+  }
+  

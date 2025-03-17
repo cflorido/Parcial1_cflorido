@@ -13,5 +13,5 @@ code {
 }
 .custom-thead {
   background-color: rgb(0, 0, 0) !important;
-  color: white !important; /* Asegurar que el texto sea visible */
+  color: white !important; 
 }
