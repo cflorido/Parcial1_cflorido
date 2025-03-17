@@ -33,6 +33,24 @@ footer {
     
 }
 .StandardTable {
+    width: 100%; 
     text-align: left; 
+    table-layout: fixed;
 }
 
+.StandardTable th:first-child,
+.StandardTable td:first-child {
+    width: 55px; 
+    min-width: 50px;
+    max-width: 70px;
+    text-align: center;
+}
+
+.StandardTable th:nth-child(2),
+.StandardTable td:nth-child(2) {
+    width: 25%;
+}
+.StandardTable th:nth-child(3),
+.StandardTable td:nth-child(3) {
+    width: 25%;
+}
