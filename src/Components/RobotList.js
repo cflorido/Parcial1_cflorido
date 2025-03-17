@@ -4,6 +4,7 @@ import { Container, Spinner, Alert } from "react-bootstrap";
 import RobotTable from "./RobotTable";
 import RobotDetails from "./RobotDetails";
 import Footer from "./Footer";
+import "./RobotList.css";
 
 const RobotList = () => {
     const [robots, setRobots] = useState([]);
@@ -45,8 +46,7 @@ const RobotList = () => {
     };
 
     return (
-        <Container style={{ textAlign: "center", marginTop: "20px" }}>
-          
+        <Container style={{ textAlign: "center", marginTop: "20px", marginLeft: "30px"}}>
             {loading ? (
                 <Spinner animation="border" role="status">
                     <span className="visually-hidden">Cargando...</span>
@@ -54,14 +54,31 @@ const RobotList = () => {
             ) : error ? (
                 <Alert variant="danger">{error}</Alert>
             ) : (
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "20px" }}>
-                    <RobotTable robots={robots} fetchRobotDetails={fetchRobotDetails} />
-                    <RobotDetails selectedRobot={selectedRobot} getRawImageUrl={getRawImageUrl} />
+                <div 
+                    style={{ 
+                        display: "flex", 
+                        alignItems: "flex-start", 
+                        gap: "20px", 
+                        justifyContent: "center" // Centra los elementos si hay espacio
+                    }}
+                >
+                    {/* Contenedor de la tabla con ancho fijo */}
+                    <div style={{ flex: "1 1 60%", minWidth: "600px" }}>
+                        <RobotTable robots={robots} fetchRobotDetails={fetchRobotDetails} />
+                    </div>
+    
+                    {/* Contenedor de los detalles con un ancho específico */}
+                    {selectedRobot && (
+                        <div style={{ flex: "1 1 30%", minWidth: "250px", marginRight: "50px" }}>
+                            <RobotDetails selectedRobot={selectedRobot} getRawImageUrl={getRawImageUrl} />
+                        </div>
+                    )}
                 </div>
             )}
             <Footer />
         </Container>
     );
+    
 };
 
 export default RobotList;

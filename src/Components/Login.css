@@ -8,6 +8,9 @@ footer {
     position: relative;
     margin-bottom: 20px;
 }
+body, .card-text, .login-title {
+    font-family: 'Inter', sans-serif;
+}
 .cancel-button {
     border: 0px solid #e75d5d !important; /* Cambia el borde a rojo */
     outline: none !important;

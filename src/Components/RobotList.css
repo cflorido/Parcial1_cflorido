@@ -10,3 +10,15 @@
     padding: 10px; 
     min-width: 160px; 
 }
+body, .card-text, .login-title {
+    font-family: 'Inter', sans-serif;
+}
+.card-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 95%;
+    letter-spacing: 0%;
+}
+footer {
+    position: relative;
+    margin-bottom: 20px;
+}

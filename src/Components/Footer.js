@@ -1,6 +1,7 @@
 // src/components/Footer.js
 import React from "react";
 import "./Login.css"; 
+import "./RobotList.css"; 
 
 const Footer = () => {
     return (
