@@ -9,8 +9,8 @@ const RobotDetails = ({ selectedRobot, getRawImageUrl }) => {
     return (
         <Card style={{ border: "1px solid black", borderRadius: "0px", backgroundColor: "#f5f5f5", padding: "8px", textAlign: "left", alignItems: "center" }}>
 
-            <Card.Title style={{ fontSize: "14px", fontWeight: "bold", textAlign: "center", marginTop: "14px" }}>
-                {selectedRobot.nombre}
+            <Card.Title style={{ fontSize: "14px",  textAlign: "center", marginTop: "14px" }}>
+            <strong>{selectedRobot.nombre}</strong>
             </Card.Title>
             <Card.Img 
                 variant="top" 

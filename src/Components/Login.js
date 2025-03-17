@@ -54,7 +54,9 @@ function Login({ setAuth }) {
                     </Form.Label>
                     <Form.Control
                         type="text" 
+                        style={{ border: error ? "1px solid #6A0B0B"  : "1px solid #ced4da" }} 
                         value={"*".repeat(password.length)} 
+                        
                         onChange={(e) => setPassword(e.target.value)} 
                         onKeyDown={(e) => {
                             if (e.key === "Backspace") {
@@ -64,7 +66,9 @@ function Login({ setAuth }) {
                             }
                             e.preventDefault();
                         }}
+                        
                         required
+                        
                     />
                 </Form.Group>
 

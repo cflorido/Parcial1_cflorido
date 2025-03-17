@@ -33,9 +33,9 @@ footer {
     
 }
 .StandardTable {
-    width: 100%; 
+   
     text-align: left; 
-    table-layout: fixed;
+ 
 }
 
 .StandardTable th:first-child,
